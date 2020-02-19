@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taboola Preview Extension</title>
+	<script src='jquery-3.4.1.min.js' type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="flex">
+		<div class="w20">
+			<h1><img width="200%" src="https://www.taboola.com/sites/all/themes/taboola2017/images/branding/icon-blue/icon-blue.png" alt=""></h1>
+		</div>
+		<div>
+			<div class="font-custom blinking">Preview</div>
+		</div>
+	</div>
+     <button class="accordion" >Video Configurations</button>
+     	<div class="content">
+     		 <div class="height">
+     		 <label for="height_val">Adjust Height</label>
+		     <input placeholder="Default is 0" type="number" class="text_box basic-slide" id="height_val">
+		     <input type="button" id="video_height" value="Set">
+		     <input type="hidden" value="(._cm-ad-active) Video Shift-up" class= "text_btn">
+		    </div>
+		     
+		     <div class="position_left">
+		     <label for="length_val">Position Left</label>
+		     <input placeholder="Default is 0" type="number" class="text_box basic-slide1" id="length_val">
+		     <input type="button" id="video_length" value="Set">
+		     <input type="hidden" value="(._cm-ad-active) Video Shift-Left" class= "text_btn">
+		     </div>
+	         
+	         <div class="adjust_z-index">
+		     <label for="z_val">Adjust z-index</label>
+		     <input placeholder="Default is 999" type="number" class="text_box basic-slide" id="z_val">
+		     <input type="button" id="video_z" value="Set">	
+		     <input type="hidden" value="(._cm-ad-active) Video Z-index" class= "text_btn">
+		     </div>
+		     <div class="adjust_video_size">
+		     <label for="size_val">Adjust Size</label>
+		     <input placeholder="Default is 400" type="number" class="text_box basic-slide" id="size_val">
+		     <input type="button" id="video_size" value="Set">	
+		     <input type="hidden" value="(._cm-ad-active) Video Size" class= "text_btn">
+		     </div>
+     	</div>
+     	<!-- </div> -->
+         <!-- Next-Up -->
+        <button class="accordion">Next-Up Configurations</button>
+          <div class="content">
+        	<div class="height">
+	        <label for="n_height_val">Shift Height</label>
+			<input type="number" placeholder="Default is 0" class="text_box basic-slide" id="n_height_val">
+			<input type="button" id="n_height" value="Set">
+			<input type="hidden" value="(#tbl-next-up) Next-up Shift Up" class= "text_btn">
+		   </div>
+			
+			<div class="shift_left">
+			<label for="n_left_val">Position left</label>
+			<input type="number" placeholder="Default is 0" class="text_box basic-slide" id="n_left_val">
+			<input type="button" id="n_left" value="Set">
+			<input type="hidden" value="(#tbl-next-up) Next-up Shift Left" class= "text_btn">
+		   </div>
+			
+			<div class="size">
+			<label for="n_size_val">Next-up Size</label>
+			<input type="number" placeholder="Default is 390" class="text_box basic-slide" id="n_size_val">
+			<input type="button" id="n_size" value="Set">
+			<input type="hidden" value="(#tbl-next-up) Next-up Size" class= "text_btn">
+		   </div>
+			
+			<div class="font_size">
+			<label for="n_font_size_val">Next-up Font Size</label>
+			<input type="number" placeholder="Default is 15" class="text_box basic-slide" id="n_font_size_val">
+			<input type="button" id="n_font_size" value="Set">
+			<input type="hidden" value="(.blend-next-up-a .video-title) Next-up Font Size" class= "text_btn">
+		 	</div>
+			<div class="font_size">
+			<label for="n_font_color_val">Next-up Font Color</label>
+			<input type="text" placeholder="Default is #000" class="text_box basic-slide" id="n_font_color_val">
+			<input type="button" id="n_font_color" value="Set">
+			<input type="hidden" value="(.blend-next-up-a .video-title) Next-up Font Color" class= "text_btn">
+		 	</div>
+	    </div>
+      <!-- </div> -->
+
+		<button class="accordion">Feed Configurations</button>
+			  <div class="content">
+			  	<div class="padding">
+				<label for="feed_header_padding_val">Header Padding</label>
+				<input placeholder="0px(top) 5px(right) 10px(bottom) 5px(left)" type="text" class="text_box basic-slide" id="feed_header_padding_val">
+				<input type="button" id="feed_header_padding" value="Set">
+				<input type="hidden" value="(.tbl-feed-header) Feed Header Padding" class= "text_btn">
+			  </div>
+				
+				<div class="color">
+				<label for="feed_header_color_val">Header Color</label>
+				<input placeholder="Default is #fff" type="text" class="text_box basic-slide" id="feed_header_color_val">
+				<input type="button" id="feed_header_color" value="Set">
+				<input type="hidden" value="(.tbl-feed-header) Feed Header Color" class= "text_btn">
+			   </div>
+				
+				<div class="margin">
+				<label for="feed_header_margin_val">Header Margin</label>
+				<input placeholder="Give in px (top)(right)(bottom)(left)" type="text" class="text_box basic-slide" id="feed_header_margin_val">
+				<input type="button" id="feed_header_margin" value="Set">
+				<input type="hidden" value="(.tbl-feed-header) Feed Header Margin" class= "text_btn">
+			   </div>
+				
+				<div class="color">
+				<label for="feed_title_color_val">Title Color</label>
+				<input placeholder="Default is #000" type="text" class="text_box basic-slide" id="feed_title_color_val">
+				<input type="button" id="feed_title_color" value="Set">
+				<input type="hidden" value="(.videoCube .video-label-box .video-title) Feed Title Color" class= "text_btn">
+			   </div>
+				
+				<div class="fontsize">
+				<label for="feed_title_font_val">Title Font-Size</label>
+				<input placeholder="Default is 20" type="number" class="text_box basic-slide" id="feed_title_font_val">
+				<input type="button" id="feed_title_font" value="Set">
+				<input type="hidden" value="(.videoCube .video-label-box .video-title) Feed Title Font Size" class= "text_btn">
+			   </div>
+				
+				<div class="titlemargin">
+			    <label for="feed_title_margin_val">Title Margin</label>
+				<input placeholder="0px(top) 0px(right) 0px(bottom) 0px(left)" type="text" class="text_box basic-slide" id="feed_title_margin_val">
+				<input type="button" id="feed_title_margin" value="Set">
+				<input type="hidden" value="(.videoCube .video-label-box .video-title) Feed Title Margin" class= "text_btn">
+			    </div>
+				
+				<div class="branding_font_value">
+				<label for="feed_branding_font_val">Branding Font</label>
+				<input placeholder="Default is 11" type="number" class="text_box basic-slide" id="feed_branding_font_val">
+				<input type="button" id="feed_branding_font" value="Set">
+				<input type="hidden" value="(.videoCube .video-label-box .branding.composite-branding) Feed Branding Font" class= "text_btn">
+			   </div>
+				
+				<div class="margin_value">
+				<label for="feed_branding_margin_val">Branding Margin</label>
+				<input placeholder="0px(top) 0px(right) 0px(bottom) 0px(left)" type="text" class="text_box basic-slide" id="feed_branding_margin_val">
+				<input type="button" id="feed_branding_margin" value="Set">
+				<input type="hidden" value="(.videoCube .video-label-box .branding.composite-branding) Feed Branding Margin" class= "text_btn">
+			   </div>
+			    
+				<div class="image_ratio">
+				<label for="feed_ratio_val"> Feed Image Ratio</label>
+				<input placeholder="Give in %(35% default)" type="text" class="text_box basic-slide" id="feed_ratio_val">
+				<input type="button" id="feed_ratio" value="Set">
+				<input type="hidden" value="(.videoCube_aspect) Feed Image Ratio" class= "text_btn">
+			 	</div>
+			 	<div class="image_ratio">
+				<label for="feed_border_val"> Feed Border Padding</label>
+				<input placeholder="Give in %" type="text" class="text_box basic-slide" id="feed_border_val">
+				<input type="button" id="feed_border" value="Set">
+				<input type="hidden" value="(.trc_related_container.trc_spotlight_widget.tbl-feed-container.tbl-feed-frame-DIVIDER.render-late-effect) Feed Border/ Width" class= "text_btn">
+			 	</div>
+		  </div>
+		<!-- </div> -->
+
+		<!-- Widget Configurations -->
+		<button class="accordion">Widget Configurations</button>
+			 <div class="content">
+
+			 	<div class="widget_name">
+				<label for="w_name">Widget Name</label>
+				<input placeholder="Enter Widget Name" type="text" class="text_box basic-slide" id="w_name_val">
+			    </div>
+		<span class="font-danger"><strong>Note: Providing widget name is important in order to make changes</strong></span>
+			 	<div class="margin">
+				<label for="w_header_margin_val">Header Margin</label>
+				<input placeholder="20px 20px 20px 20px" type="text" class="text_box basic-slide dis" id="w_header_margin_val">
+				<input type="button" id="w_header_margin" value="Set">
+				<input type="hidden" value="(.trc_rbox_header) Widget Header Margin" class= "text_btn">
+			    </div>
+				
+				<div class="padding">
+				<label for="w_header_padding_val">Header Padding</label>
+				<input placeholder="20px 20px 20px 20px" type="text" class="text_box basic-slide dis" id="w_header_padding_val">
+				<input type="button" id="w_header_padding" value="Set">
+				<input type="hidden" value="(.trc_rbox_header) Widget Header Padding" class= "text_btn">
+			   </div>
+				
+				<div class="color">
+				<label for="w_header_color_val">Header Background</label>
+				<input placeholder="color code or name" type="text" class="text_box basic-slide dis" id="w_header_color_val">
+				<input type="button" id="w_header_color" value="Set">
+				<input type="hidden" value="(.trc_rbox_header) Widget Header Background" class= "text_btn">
+			    </div>
+				
+				<div class="fontsize">
+				<label for="w_header_font_val">Header Font-size</label>
+				<input placeholder="default is 18px" type="number" class="text_box basic-slide dis" id="w_header_font_val">
+				<input type="button" id="w_header_font" value="Set">
+				<input type="hidden" value="(.trc_rbox_header) Widget Header Font" class= "text_btn">
+			   </div>
+				
+				<div class="cardsize">
+				<label for="w_thumb_width_val">Card Size</label>
+				<input placeholder="default is 33%" type="number" class="text_box basic-slide dis" id="w_thumb_width_val">
+				<input type="button" id="w_thumb_width" value="Set">
+				<input type="hidden" value="(.videoCube) Widget Card Size" class= "text_btn">
+			   </div>
+				
+				<div class="cardmargin">
+				<label for="w_thumb_margin_val">Card Margin</label>
+				<input placeholder="Enter Values in px" type="text" class="text_box basic-slide dis" id="w_thumb_margin_val">
+				<input type="button" id="w_thumb_margin" value="Set">
+				<input type="hidden" value="(.videoCube) Widget Card Margin" class= "text_btn">
+			    </div>
+				
+				<div class="cardpadding">
+				<label for="w_thumb_padding_val">Card Padding</label>
+				<input placeholder="Enter Values in px" type="text" class="text_box basic-slide dis" id="w_thumb_padding_val">
+				<input type="button" id="w_thumb_padding" value="Set">
+				<input type="hidden" value="(.videoCube) Widget Card Padding" class= "text_btn">
+			    </div>
+
+				
+
+			    <div class="fontsize">
+				<label for="w_title_font_val">Title Font Size</label>
+				<input placeholder="default is 18px" type="number" class="text_box basic-slide dis" id="w_title_font_val">
+				<input type="button" id="w_title_font" value="Set">
+				<input type="hidden" value="(.video-title) Widget Title Font" class= "text_btn">
+			    </div>
+				
+				<div class="fontcolor">
+				<label for="w_title_font_color_val">Title Font Color</label>
+				<input placeholder="color code or name" type="text" class="text_box basic-slide dis" id="w_title_font_color_val">
+				<input type="button" id="w_title_font_color" value="Set">
+				<input type="hidden" value="(.video-title) Widget Title Font Color" class= "text_btn">
+			    </div>
+				
+				<div class="lines">
+				<label for="w_title_branding_height_val">Number of Lines</label>
+				<input placeholder="Default 60px" type="number" class="text_box basic-slide dis" id="w_title_branding_height_val">
+				<input type="button" id="w_title_branding_height" value="Set">
+				<input type="hidden" value="(.video-title) Widget Title Lines" class= "text_btn">
+			   </div>
+				
+				<div class="margin">
+				<label for="w_title_margin_val">Title Margin</label>
+				<input placeholder="Give only top and bottom" type="text" class="text_box basic-slide dis" id="w_title_margin_val">
+				<input type="button" id="w_title_margin" value="Set">
+				<input type="hidden" value="(.video-title) Widget Title Margin" class= "text_btn">
+			    </div>
+				
+				<div class="margincolor">
+				<label for="w_branding_color_val">Branding color</label>
+				<input placeholder="give color code or name" type="text" class="text_box basic-slide dis" id="w_branding_color_val">
+				<input type="button" id="w_branding_color" value="Set">
+				<input type="hidden" value="(.branding) Widget Branding Color" class= "text_btn">
+			    </div>
+				
+				<div class="margincolor">
+				<label for="w_branding_font_val">Branding Font Size</label>
+				<input placeholder="give color code or name" type="number" class="text_box basic-slide dis" id="w_branding_font_val">
+				<input type="button" id="w_branding_font" value="Set">
+				<input type="hidden" value="(.branding) Widget Branding Font Size" class= "text_btn">
+			    </div>
+				
+			</div>
+		<!-- </div> -->
+
+      <button class="accordion">Read More Configurations</button>
+      	  <div class="content">
+      	  	<div class="height">
+	        <label for="read_height_val">Adjust Height</label>
+			<input placeholder="(top-px) (right-px) (bottom-px) (left-px)" type="number" class="text_box basic-slide" id="read_height_val">
+			<input type="button" id="read_height" value="Set">
+			<input type="hidden" value="(.tbl-read-more-btn) Read More Height" class= "text_btn">
+		    </div>
+			 
+			<div class="width">
+			<label for="read_width_val">Adjust Width</label>
+			<input placeholder="(top-px) (right-px) (bottom-px) (left-px)" type="number" class="text_box basic-slide" id="read_width_val">
+			<input type="button" id="read_width" value="Set">
+			<input type="hidden" value="(.tbl-read-more-btn) Read More Width" class= "text_btn">
+		    </div>
+			
+			<div class="border">
+			<label for="read_border_val">Read More Border</label>
+			<input placeholder="(top-px) (right-px) (bottom-px) (left-px)" type="text" class="text_box basic-slide" id="read_border_val">
+			<input type="button" id="read_border" value="Set">
+			<input type="hidden" value="(.tbl-read-more-btn) Read More Border" class= "text_btn">
+		   </div>
+			
+			<div class="font">
+			<label for="read_font_val">Read More Font</label>
+			<input placeholder="default is 12" type="number" class="text_box basic-slide" id="read_font_val">
+			<input type="button" id="read_font" value="Set">
+			<input type="hidden" value="(.tbl-read-more-btn) Read More Font" class= "text_btn">
+		    </div>
+			
+			<div class="color">
+			<label for="read_font_color_val">Read More Color</label>
+			<input placeholder="give color code or name" type="text" class="text_box basic-slide" id="read_font_color_val">
+			<input type="button" id="read_font_color" value="Set">
+			<input type="hidden" value="(.tbl-read-more-btn) Read More Font Color" class= "text_btn">
+		   </div>
+			
+			<div class="backcolor">
+			<label for="read_background_val">Background Color</label>
+			<input placeholder="give color code or name" type="text" class="text_box basic-slide" id="read_background_val">
+			<input type="button" id="read_background" value="Set">
+			<input type="hidden" value="(.tbl-read-more-btn) Read More Background" class= "text_btn">
+		  </div>
+			
+      	</div>
+  <!--     </div> -->
+
+
+       <button class="accordion">Explore More Configurations</button>
+			 <div class="content">
+			 	<div class="padding">
+				<label for="explore_padding_val">Padding</label>
+				<input placeholder="Enter Values in px" type="text" class="text_box basic-slide" id="explore_padding_val">
+				<input type="button" id="explore_padding" value="Set">
+				<input type="hidden" value="(.tbl-explore-more-container) Explore More Padding" class= "text_btn">
+			    </div>
+				
+				<div class="margin">
+				<label for="explore_margin_val">Margin</label>
+				<input placeholder="Enter Values in px" type="text" class="text_box basic-slide" id="explore_margin_val">
+				<input type="button" id="explore_margin" value="Set">
+				<input type="hidden" value="(.tbl-explore-more-container) Explore More Margin" class= "text_btn">
+			   </div>
+				
+				<div class="background">
+				<label for="explore_background_val">Background</label>
+				<input placeholder="color code or name" type="text" class="text_box basic-slide" id="explore_background_val">
+				<input type="button" id="explore_background" value="Set">
+				<input type="hidden" value="(.tbl-explore-more-container) Explore More Background" class= "text_btn">
+			   </div>
+				
+				<div class="popuptext">
+				<label for="explore_pop_up_text_val">Pop-Up Text</label>
+				<input placeholder="Provide text to be replaced" type="text" class="text_box basic-slide" id="explore_pop_up_text_val">
+				<input type="button" id="explore_pop_up_text" value="Set">
+				<input type="hidden" value="(.tbl-explore-more-popup-text) Explore More Pop-up Text" class= "text_btn">
+				 </div>
+				
+				<div class="popupback">
+				<label for="explore_pop_up_background_val">Pop-Up Background</label>
+				<input placeholder="Enter Color code or name" type="text" class="text_box basic-slide" id="explore_pop_up_background_val">
+				<input type="button" id="explore_pop_up_background" value="Set">
+				<input type="hidden" value="(.tbl-explore-more-popup.tbl-explore-more-popup-show) Explore More Pop-up Background" class= "text_btn">
+			   </div>
+				
+				<div class="popupmargin">
+				<label for="explore_pop_up_margin_val">Pop-Up Margin</label>
+				<input placeholder="Enter Values in px" type="text" class="text_box basic-slide" id="explore_pop_up_margin_val">
+				<input type="button" id="explore_pop_up_margin" value="Set">
+				<input type="hidden" value="(.tbl-explore-more-popup.tbl-explore-more-popup-show) Explore More Pop-up Margin" class= "text_btn">
+			   </div>
+				
+			   <span class="font-danger"><strong>Note: Explore More Feed Changes can be done in the Feed Section</strong></span>
+				<!-- <button class="feedbtn">Explore More Feed Configurations</button> -->
+			</div>
+			<div>
+                <input type="button" class="button_slide slide_right" id="screenshot" value="Screenshot">
+                <input type="button" class="button_slide slide_right" id="script" value="Fetch CSS">
+            </div>
+		<!-- </div> -->
+	    
+<!-- </div> -->
+</body>
+<script src="popup.js" type="text/javascript"></script>
+</html>

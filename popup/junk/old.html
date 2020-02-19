@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taboola Preview Extension</title>
+	<script src='jquery-3.4.1.min.js' type="text/javascript"></script>
+	<script src="popup.js" type="text/javascript"></script>
+</head>
+<body style="width: 200px;">
+	<h1>Test Link</h1>
+	<p id='video' style="border-style: solid;">video configurations
+		<input placeholder="Enter Values" type="number" class= "text_box" id="height_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(._cm-ad-active) Video Shift-up" class= "text_btn">
+		<input type="button" id="video_height" value="shift-up">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="length_val">
+		<input type="text" disabled="true" placeholder="px">
+		<input type="hidden" value="(._cm-ad-active) Video Shift-Left" class= "text_btn">
+		<input type="button" id="video_length" value="shift-left">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="z_val">
+		<input type="text" disabled="true" placeholder="default is 999"><br>
+		<input type="hidden" value="(._cm-ad-active) Video Z-index" class= "text_btn">
+		<input type="button" id="video_z" value="z-index">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="size_val">
+		<input type="text" disabled="true" placeholder="default is 400"><br>
+		<input type="hidden" value="(._cm-ad-active) Video Size" class= "text_btn">
+		<input type="button" id="video_size" value="video size">
+	</p>
+	<p id='next-up' style="border-style: solid;">next-up configurations
+		<input type="number" placeholder="Enter Value" class= "text_box" id="n_height_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(#tbl-next-up) Next-up Shift Up" class= "text_btn">
+		<input type="button" id="n_height" value="shift height">
+		<br>
+		<input type="number" placeholder="Enter Value" class= "text_box" id="n_left_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(#tbl-next-up) Next-up Shift Left" class= "text_btn">
+		<input type="button" id="n_left" value="shift left">
+		<br>
+		<input type="number" placeholder="Enter Value" class= "text_box" id="n_size_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(#tbl-next-up) Next-up Size" class= "text_btn">
+		<input type="button" id="n_size" value="next-up size">
+		<br>
+		<input type="number" placeholder="Enter Value" class= "text_box" id="n_font_size_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(.blend-next-up-a .video-title) Next-up Font Size" class= "text_btn">
+		<input type="button" id="n_font_size" value="next-up font size">
+		<br>
+		<input type="text" placeholder="Enter Value" class= "text_box" id="n_font_color_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(.blend-next-up-a .video-title) Next-up Font Color" class= "text_btn">
+		<input type="button" id="n_font_color" value="next-up font color">
+	</p>
+	<p id='feed' style="border-style: solid;">Feed Configurations
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_header_padding_val">
+		<input type="text" disabled="true" placeholder="0px 5px 10px 5px">
+		<input type="hidden" value="(.tbl-feed-header) Feed Header Padding" class= "text_btn">
+		<input type="button" id="feed_header_padding" value="feed header padding">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_header_color_val">
+		<input type="text" disabled="true" placeholder="coded value or name">
+		<input type="hidden" value="(.tbl-feed-header) Feed Header Color" class= "text_btn">
+		<input type="button" id="feed_header_color" value="header color">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_header_margin_val">
+		<input type="text" disabled="true" placeholder="px">
+		<input type="hidden" value="(.tbl-feed-header) Feed Header Margin" class= "text_btn">
+		<input type="button" id="feed_header_margin" value="feed header margin">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_title_color_val">
+		<input type="text" disabled="true" placeholder="coded value or name">
+		<input type="hidden" value="(.videoCube .video-label-box .video-title) Feed Title Color" class= "text_btn">
+		<input type="button" id="feed_title_color" value="title color">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_title_font_val">
+		<input type="text" disabled="true" placeholder="px">
+		<input type="hidden" value="(.videoCube .video-label-box .video-title) Feed Title Font Size" class= "text_btn">
+		<input type="button" id="feed_title_font" value="title font size">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_title_margin_val">
+		<input type="text" disabled="true" placeholder="0px 0px 0px 0px">
+		<input type="hidden" value="(.videoCube .video-label-box .video-title) Feed Title Margin" class= "text_btn">
+		<input type="button" id="feed_title_margin" value="title margin value">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="feed_branding_font_val">
+		<input type="text" disabled="true" placeholder="px">
+		<input type="hidden" value="(.videoCube .video-label-box .branding.composite-branding) Feed Branding Font" class= "text_btn">
+		<input type="button" id="feed_branding_font" value="branding font value">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_branding_margin_val">
+		<input type="text" disabled="true" placeholder="0px 0px 0px 0px">
+		<input type="hidden" value="(.videoCube .video-label-box .branding.composite-branding) Feed Branding Margin" class= "text_btn">
+		<input type="button" id="feed_branding_margin" value="branding margin value">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_ratio_val">
+		<input type="text" disabled="true" placeholder="0% 0% 0% 0%">
+		<input type="hidden" value="(.videoCube_aspect) Feed Image Ratio" class= "text_btn">
+		<input type="button" id="feed_ratio" value="feed image ratio value">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="feed_border_val">
+		<input type="text" disabled="true" placeholder="0px 0px 0px 0px">
+		<input type="hidden" value="(.trc_related_container.trc_spotlight_widget.tbl-feed-container.tbl-feed-frame-DIVIDER.render-late-effect) Feed Border/ Width" class= "text_btn">
+		<input type="button" id="feed_border" class= "text_btn" value="feed border/margin value">
+	</p>
+	<p id='widget' style="border-style: solid;">widget configurations
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_header_margin_val">
+		<input type="text" disabled="true" placeholder="20px 20px 20px 20px"><br>
+		<input type="hidden" value="(.trc_rbox_header) Widget Header Margin" class= "text_btn">
+		<input type="button" id="w_header_margin" value="header margin">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_header_padding_val">
+		<input type="text" disabled="true" placeholder="20px 20px 20px 20px">
+		<input type="hidden" value="(.trc_rbox_header) Widget Header Padding" class= "text_btn">
+		<input type="button" id="w_header_padding" value="header padding">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_header_color_val">
+		<input type="text" disabled="true" placeholder="color code or name"><br>
+		<input type="hidden" value="(.trc_rbox_header) Widget Header Background" class= "text_btn">
+		<input type="button" id="w_header_color" value="header background">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="w_header_font_val">
+		<input type="text" disabled="true" placeholder="default is 18px"><br>
+		<input type="hidden" value="(.trc_rbox_header) Widget Header Font" class= "text_btn">
+		<input type="button" id="w_header_font" value="header font size">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="w_thumb_width_val">
+		<input type="text" disabled="true" placeholder="default is 33%"><br>
+		<input type="hidden" value="(.videoCube) Widget Card Size" class= "text_btn">
+		<input type="button" id="w_thumb_width" value="Card size">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_thumb_margin_val">
+		<input type="text" disabled="true" placeholder="enter in px"><br>
+		<input type="hidden" value="(.videoCube) Widget Card Margin" class= "text_btn">
+		<input type="button" id="w_thumb_margin" value="Cards margin(makes space)">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_thumb_padding_val">
+		<input type="text" disabled="true" placeholder="default is 0px"><br>
+		<input type="hidden" value="(.videoCube) Widget Card Padding" class= "text_btn">
+		<input type="button" id="w_thumb_padding" value="Card padding (compress Card's)">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="w_title_font_val">
+		<input type="text" disabled="true" placeholder="default is 0px"><br>
+		<input type="hidden" value="(.video-title) Widget Title Font" class= "text_btn">
+		<input type="button" id="w_title_font" value="Title Font Size">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_title_font_color_val">
+		<input type="text" disabled="true" placeholder="default is 0px"><br>
+		<input type="hidden" value="(.video-title) Widget Title Font Color" class= "text_btn">
+		<input type="button" id="w_title_font_color" value="Title Font Color">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="w_title_branding_height_val">
+		<input type="text" disabled="true" placeholder="Reduce value from 60px to increase height"><br>
+		<input type="hidden" value="(.video-title) Widget Title Lines" class= "text_btn">
+		<input type="button" id="w_title_branding_height" value="Number of lines">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_title_margin_val">
+		<input type="text" disabled="true" placeholder="Give only top and bottom"><br>
+		<input type="hidden" value="(.video-title) Widget Title Margin" class= "text_btn">
+		<input type="button" id="w_title_margin" value="Margin for titles">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_branding_color_val">
+		<input type="text" disabled="true" placeholder="give color code or name"><br>
+		<input type="hidden" value="(.branding) Widget Branding Color" class= "text_btn">
+		<input type="button" id="w_branding_color" value="Branding Color">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="w_branding_font_val">
+		<input type="text" disabled="true" placeholder="give color code or name"><br>
+		<input type="hidden" value="(.branding) Widget Branding Font Size" class= "text_btn">
+		<input type="button" id="w_branding_font" value="Branding Font Size">
+		<br>
+	</p>
+<p id='read-more' style="border-style: solid;">Read more configurations
+		<input placeholder="Enter Values" type="number" class= "text_box" id="read_height_val">
+		<input type="text" disabled="true" placeholder="give color code or name"><br>
+		<input type="hidden" value="(.tbl-read-more-btn) Read More Height" class= "text_btn">
+		<input type="button" id="read_height" value="Read more height (box size)">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="read_width_val">
+		<input type="text" disabled="true" placeholder="give color code or name"><br>
+		<input type="hidden" value="(.tbl-read-more-btn) Read More Width" class= "text_btn">
+		<input type="button" id="read_width" value="Read more width (box size)">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="read_border_val">
+		<input type="text" disabled="true" placeholder="give color code or name"><br>
+		<input type="hidden" value="(.tbl-read-more-btn) Read More Border" class= "text_btn">
+		<input type="button" id="read_border" value="Read more border">
+		<br>
+		<input placeholder="Enter Values" type="number" class= "text_box" id="read_font_val">
+		<input type="text" disabled="true" placeholder="give color code or name"><br>
+		<input type="hidden" value="(.tbl-read-more-btn) Read More Font" class= "text_btn">
+		<input type="button" id="read_font" value="Read more font">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="read_font_color_val">
+		<input type="text" disabled="true" placeholder="give color code or name"><br>
+		<input type="hidden" value="(.tbl-read-more-btn) Read More Font Color" class= "text_btn">
+		<input type="button" id="read_font_color" value="Read more font color">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="read_background_val">
+		<input type="text" disabled="true" placeholder="give color code or name"><br>
+		<input type="hidden" value="(.tbl-read-more-btn) Read More Background" class= "text_btn">
+		<input type="button" id="read_background" value="Read more background color">
+		<br>
+</p>
+<p id='explore-more' style="border-style: solid;">Explore More configurations
+		<input placeholder="Enter Values" type="text" class= "text_box" id="explore_padding_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(.tbl-explore-more-container) Explore More Padding" class= "text_btn">
+		<input type="button" id="explore_padding" value="Explore More (padding)">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="explore_margin_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(.tbl-explore-more-container) Explore More Margin" class= "text_btn">
+		<input type="button" id="explore_margin" value="Explore More (margin)">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="explore_background_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(.tbl-explore-more-container) Explore More Background" class= "text_btn">
+		<input type="button" id="explore_background" value="Explore More (background)">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="explore_pop_up_text_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(.tbl-explore-more-popup-text) Explore More Pop-up Text" class= "text_btn">
+		<input type="button" id="explore_pop_up_text" value="Explore More Pop-up text">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="explore_pop_up_background_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(.tbl-explore-more-popup.tbl-explore-more-popup-show) Explore More Pop-up Background" class= "text_btn">
+		<input type="button" id="explore_pop_up_background" value="Explore More Pop-up background">
+		<br>
+		<input placeholder="Enter Values" type="text" class= "text_box" id="explore_pop_up_margin_val">
+		<input type="text" disabled="true" placeholder="px"><br>
+		<input type="hidden" value="(.tbl-explore-more-popup.tbl-explore-more-popup-show) Explore More Pop-up Margin" class= "text_btn">
+		<input type="button" id="explore_pop_up_margin" value="Explore More Pop-up margin">
+		<br>
+</p>
+
+<div>
+<h2>
+		<input type="button" id="screenshot" value="Screenshot">	
+</h2>
+<h2>
+		<input type="button" id="script" value="Fetch Script">	
+</h2>
+</div>
+
+</body>
+</html>
